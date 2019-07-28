@@ -707,13 +707,122 @@
             <objects>
                 <viewController id="NNW-f1-Qqb" customClass="TaskViewController" customModule="OCBuilder" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="eZs-lk-K1D">
-                        <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
+                        <rect key="frame" x="0.0" y="0.0" width="568" height="616"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Rhb-Sq-gSI" userLabel="Clone Location Label">
+                                <rect key="frame" x="18" y="579" width="298" height="17"/>
+                                <textFieldCell key="cell" lineBreakMode="clipping" title="Location where you would like to save the repos." id="IOw-6t-zhx">
+                                    <font key="font" usesAppearanceFont="YES"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <pathControl verticalHuggingPriority="750" allowsExpansionToolTips="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Vss-Vv-VO2" userLabel="Clone Location">
+                                <rect key="frame" x="17" y="548" width="96" height="25"/>
+                                <pathCell key="cell" selectable="YES" editable="YES" alignment="left" pathStyle="popUp" id="TGR-M5-4B0">
+                                    <font key="font" metaFont="system"/>
+                                </pathCell>
+                            </pathControl>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="4eK-aF-fvS" userLabel="Completed Location Label">
+                                <rect key="frame" x="18" y="520" width="209" height="17"/>
+                                <textFieldCell key="cell" lineBreakMode="clipping" title="Completed Builds Folder Location" id="YRs-Bn-4uq">
+                                    <font key="font" usesAppearanceFont="YES"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <pathControl verticalHuggingPriority="750" allowsExpansionToolTips="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GNb-Zw-qeh" userLabel="Completed Location">
+                                <rect key="frame" x="17" y="489" width="96" height="25"/>
+                                <pathCell key="cell" selectable="YES" editable="YES" alignment="left" pathStyle="popUp" id="YOf-RR-xwR">
+                                    <font key="font" metaFont="system"/>
+                                </pathCell>
+                            </pathControl>
+                            <scrollView borderType="none" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7MA-Tb-gM7" userLabel="Output View">
+                                <rect key="frame" x="20" y="98" width="528" height="345"/>
+                                <clipView key="contentView" drawsBackground="NO" copiesOnScroll="NO" id="jii-9O-Q8S">
+                                    <rect key="frame" x="0.0" y="0.0" width="528" height="345"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <textView importsGraphics="NO" richText="NO" verticallyResizable="YES" spellingCorrection="YES" smartInsertDelete="YES" id="efZ-vh-5Y3">
+                                            <rect key="frame" x="0.0" y="0.0" width="528" height="345"/>
+                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                            <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                            <size key="minSize" width="528" height="345"/>
+                                            <size key="maxSize" width="537" height="10000000"/>
+                                            <color key="insertionPointColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                        </textView>
+                                    </subviews>
+                                </clipView>
+                                <scroller key="horizontalScroller" hidden="YES" wantsLayer="YES" verticalHuggingPriority="750" horizontal="YES" id="nBU-tM-Ilq">
+                                    <rect key="frame" x="-100" y="-100" width="240" height="16"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </scroller>
+                                <scroller key="verticalScroller" wantsLayer="YES" verticalHuggingPriority="750" horizontal="NO" id="jEJ-53-Jvb">
+                                    <rect key="frame" x="512" y="0.0" width="16" height="345"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </scroller>
+                            </scrollView>
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="yDW-do-0df">
+                                <rect key="frame" x="370" y="13" width="71" height="32"/>
+                                <buttonCell key="cell" type="push" title="Build" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="czN-9v-IWz">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="startTask:" target="NNW-f1-Qqb" id="d3q-9y-YTa"/>
+                                </connections>
+                            </button>
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="URX-YK-IZV">
+                                <rect key="frame" x="485" y="13" width="69" height="32"/>
+                                <buttonCell key="cell" type="push" title="Stop" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="abH-JQ-Jy6">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="stopTask:" target="NNW-f1-Qqb" id="USS-MI-gE6"/>
+                                </connections>
+                            </button>
+                            <progressIndicator wantsLayer="YES" horizontalHuggingPriority="750" verticalHuggingPriority="750" maxValue="100" bezeled="NO" indeterminate="YES" controlSize="small" style="spinning" translatesAutoresizingMaskIntoConstraints="NO" id="WdO-Ua-eda">
+                                <rect key="frame" x="455" y="20" width="16" height="16"/>
+                            </progressIndicator>
+                        </subviews>
+                        <constraints>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Rhb-Sq-gSI" secondAttribute="trailing" constant="20" symbolic="YES" id="2JG-Ek-5Md"/>
+                            <constraint firstAttribute="bottom" secondItem="URX-YK-IZV" secondAttribute="bottom" constant="20" id="8kp-ua-Zx2"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="4eK-aF-fvS" secondAttribute="trailing" constant="20" symbolic="YES" id="FqU-wE-7Ex"/>
+                            <constraint firstItem="Rhb-Sq-gSI" firstAttribute="leading" secondItem="4eK-aF-fvS" secondAttribute="leading" id="IA6-DV-IAl"/>
+                            <constraint firstItem="yDW-do-0df" firstAttribute="top" secondItem="7MA-Tb-gM7" secondAttribute="bottom" constant="57" id="Ifp-Mf-ahk"/>
+                            <constraint firstItem="URX-YK-IZV" firstAttribute="trailing" secondItem="efZ-vh-5Y3" secondAttribute="trailing" id="Imj-Co-4cL"/>
+                            <constraint firstAttribute="bottom" secondItem="WdO-Ua-eda" secondAttribute="bottom" constant="20" id="P5R-ub-7ZZ"/>
+                            <constraint firstItem="GNb-Zw-qeh" firstAttribute="top" secondItem="4eK-aF-fvS" secondAttribute="bottom" constant="8" symbolic="YES" id="RT3-Fm-gb6"/>
+                            <constraint firstItem="URX-YK-IZV" firstAttribute="leading" secondItem="WdO-Ua-eda" secondAttribute="trailing" constant="20" id="SUP-nb-Ntx"/>
+                            <constraint firstItem="7MA-Tb-gM7" firstAttribute="top" secondItem="GNb-Zw-qeh" secondAttribute="bottom" constant="50" id="Slz-Vl-Do4"/>
+                            <constraint firstItem="7MA-Tb-gM7" firstAttribute="top" secondItem="eZs-lk-K1D" secondAttribute="top" constant="173" id="bCD-oy-y9j"/>
+                            <constraint firstItem="Rhb-Sq-gSI" firstAttribute="top" secondItem="eZs-lk-K1D" secondAttribute="top" constant="20" id="dLq-Te-9bW"/>
+                            <constraint firstItem="Rhb-Sq-gSI" firstAttribute="leading" secondItem="Vss-Vv-VO2" secondAttribute="leading" id="dRj-Ih-Cud"/>
+                            <constraint firstItem="yDW-do-0df" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="eZs-lk-K1D" secondAttribute="leading" constant="20" symbolic="YES" id="emr-Z7-f94"/>
+                            <constraint firstItem="Rhb-Sq-gSI" firstAttribute="leading" secondItem="eZs-lk-K1D" secondAttribute="leading" constant="20" symbolic="YES" id="fzx-ZE-ey7"/>
+                            <constraint firstItem="Vss-Vv-VO2" firstAttribute="top" secondItem="Rhb-Sq-gSI" secondAttribute="bottom" constant="8" symbolic="YES" id="hPf-P2-L9F"/>
+                            <constraint firstAttribute="trailing" secondItem="7MA-Tb-gM7" secondAttribute="trailing" constant="20" id="iaS-hu-6dW"/>
+                            <constraint firstItem="Rhb-Sq-gSI" firstAttribute="leading" secondItem="GNb-Zw-qeh" secondAttribute="leading" id="in1-Pg-xuf"/>
+                            <constraint firstAttribute="bottom" secondItem="yDW-do-0df" secondAttribute="bottom" constant="20" id="lUQ-TY-3wU"/>
+                            <constraint firstItem="Rhb-Sq-gSI" firstAttribute="leading" secondItem="7MA-Tb-gM7" secondAttribute="leading" id="lkP-Wo-s5q"/>
+                            <constraint firstItem="WdO-Ua-eda" firstAttribute="leading" secondItem="yDW-do-0df" secondAttribute="trailing" constant="20" id="ooa-cM-19d"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="buildButton" destination="yDW-do-0df" id="DmV-Un-JQJ"/>
+                        <outlet property="cloneLocation" destination="Vss-Vv-VO2" id="Zf2-Nh-g8R"/>
+                        <outlet property="outputText" destination="efZ-vh-5Y3" id="6dN-NV-6AL"/>
+                        <outlet property="pathLocation" destination="GNb-Zw-qeh" id="QNY-zv-p6b"/>
+                        <outlet property="spinner" destination="WdO-Ua-eda" id="m5W-hA-quc"/>
+                    </connections>
                 </viewController>
                 <customObject id="bYY-Af-pVN" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="75" y="709"/>
+            <point key="canvasLocation" x="75" y="893"/>
         </scene>
     </scenes>
 </document>
