@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		CF1DCFBD22ED3A3300B513CF /* TaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1DCFBC22ED3A3300B513CF /* TaskViewController.swift */; };
+		CF7247C622EDFDD10031244F /* BuildScript.command in Resources */ = {isa = PBXBuildFile; fileRef = CF7247C522EDFDD10031244F /* BuildScript.command */; };
+		CFDDE33A22EE326200AD61D0 /* mtoc in Resources */ = {isa = PBXBuildFile; fileRef = CFDDE33922EE326200AD61D0 /* mtoc */; };
+		CFDDE33C22EE326900AD61D0 /* nasm in Resources */ = {isa = PBXBuildFile; fileRef = CFDDE33B22EE326900AD61D0 /* nasm */; };
 		CFFC393A22ED390600A4CA25 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFFC393922ED390600A4CA25 /* AppDelegate.swift */; };
 		CFFC393E22ED390800A4CA25 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CFFC393D22ED390800A4CA25 /* Assets.xcassets */; };
 		CFFC394122ED390800A4CA25 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CFFC393F22ED390800A4CA25 /* Main.storyboard */; };
@@ -15,6 +18,9 @@
 
 /* Begin PBXFileReference section */
 		CF1DCFBC22ED3A3300B513CF /* TaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskViewController.swift; sourceTree = "<group>"; };
+		CF7247C522EDFDD10031244F /* BuildScript.command */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = BuildScript.command; sourceTree = "<group>"; };
+		CFDDE33922EE326200AD61D0 /* mtoc */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = mtoc; sourceTree = "<group>"; };
+		CFDDE33B22EE326900AD61D0 /* nasm */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = nasm; sourceTree = "<group>"; };
 		CFFC393622ED390600A4CA25 /* OCBuilder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OCBuilder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CFFC393922ED390600A4CA25 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CFFC393D22ED390800A4CA25 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -55,6 +61,9 @@
 			children = (
 				CFFC393922ED390600A4CA25 /* AppDelegate.swift */,
 				CF1DCFBC22ED3A3300B513CF /* TaskViewController.swift */,
+				CF7247C522EDFDD10031244F /* BuildScript.command */,
+				CFDDE33922EE326200AD61D0 /* mtoc */,
+				CFDDE33B22EE326900AD61D0 /* nasm */,
 				CFFC393D22ED390800A4CA25 /* Assets.xcassets */,
 				CFFC393F22ED390800A4CA25 /* Main.storyboard */,
 				CFFC394222ED390800A4CA25 /* Info.plist */,
@@ -127,8 +136,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CF7247C622EDFDD10031244F /* BuildScript.command in Resources */,
 				CFFC393E22ED390800A4CA25 /* Assets.xcassets in Resources */,
 				CFFC394122ED390800A4CA25 /* Main.storyboard in Resources */,
+				CFDDE33A22EE326200AD61D0 /* mtoc in Resources */,
+				CFDDE33C22EE326900AD61D0 /* nasm in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
